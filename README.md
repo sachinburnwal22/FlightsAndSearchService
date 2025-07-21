@@ -30,7 +30,7 @@
 -created_at
 -updated_at
 
-#Flight
+#Flights
 -id
 -src_airport_id
 -dest_airport_id
