@@ -1,6 +1,6 @@
 const express = require("express");
 const { PORT } = require("./config/serverConfig");
-
+const { City } = require("./models/index");
 const bodyParser = require("body-parser");
 const setupAndStartServer = async () => {
   //create the express object
@@ -10,6 +10,9 @@ const setupAndStartServer = async () => {
   app.use(bodyParser.urlencoded({ extended: true }));
   app.listen(PORT, () => {
     console.log(`server started at ${PORT}`);
+    City.create({
+      name: "New Delhi",
+    });
   });
 };
 
